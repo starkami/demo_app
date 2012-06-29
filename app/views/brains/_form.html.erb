@@ -1,0 +1,29 @@
+<%= form_for(@brain) do |f| %>
+  <% if @brain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@brain.errors.count, "error") %> prohibited this brain from being saved:</h2>
+
+      <ul>
+      <% @brain.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :blood %><br />
+    <%= f.text_field :blood %>
+  </div>
+  <div class="field">
+    <%= f.label :finger %><br />
+    <%= f.text_field :finger %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br />
+    <%= f.text_field :string %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

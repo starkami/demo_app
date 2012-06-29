@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Blood:</b>
+  <%= @brain.blood %>
+</p>
+
+<p>
+  <b>Finger:</b>
+  <%= @brain.finger %>
+</p>
+
+<p>
+  <b>String:</b>
+  <%= @brain.string %>
+</p>
+
+
+<%= link_to 'Edit', edit_brain_path(@brain) %> |
+<%= link_to 'Back', brains_path %>

@@ -1,0 +1,27 @@
+<h1>Listing brains</h1>
+
+<table>
+  <tr>
+    <th>Blood</th>
+    <th>Finger</th>
+    <th>String</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @brains.each do |brain| %>
+  <tr>
+    <td><%= brain.blood %></td>
+    <td><%= brain.finger %></td>
+    <td><%= brain.string %></td>
+    <td><%= link_to 'Show', brain %></td>
+    <td><%= link_to 'Edit', edit_brain_path(brain) %></td>
+    <td><%= link_to 'Destroy', brain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Brain', new_brain_path %>
